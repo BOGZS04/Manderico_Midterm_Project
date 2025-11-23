@@ -13,6 +13,51 @@
   </div>
 </div>
 
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
+
+  <!-- Total Genres -->
+  <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 sm:p-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-600 text-xs sm:text-sm font-medium">Total Genres</p>
+        <p class="text-2xl sm:text-3xl font-bold text-gray-800 mt-2">{{ $totalGenres }}</p>
+      </div>
+      <div class="text-4xl sm:text-5xl opacity-20">📚</div>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">Genres available in your system</p>
+  </div>
+
+  <!-- Genre with Most Movies -->
+  <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 sm:p-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-600 text-xs sm:text-sm font-medium">Top Genre</p>
+        <p class="text-xl sm:text-2xl font-bold text-gray-800 mt-2">
+          {{ $topGenre ? $topGenre->name : 'No genres yet' }}
+        </p>
+      </div>
+      <div class="text-4xl sm:text-5xl opacity-20">🏆</div>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">
+      {{ $topGenre ? $topGenre->movies_count . ' movies' : 'No data available' }}
+    </p>
+  </div>
+
+  <!-- Total Movies Inside All Genres -->
+  <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 p-4 sm:p-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-gray-600 text-xs sm:text-sm font-medium">Total Movies Across Genres</p>
+        <p class="text-2xl sm:text-3xl font-bold text-gray-800 mt-2">{{ $totalMoviesAcrossGenres }}</p>
+      </div>
+      <div class="text-4xl sm:text-5xl opacity-20">🎞️</div>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">Total movies counted from all genres</p>
+  </div>
+
+</div>
+
 <!-- Add New Genre Form -->
 <div class="bg-white rounded-lg shadow-md p-4 sm:p-6 mb-8">
   <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
