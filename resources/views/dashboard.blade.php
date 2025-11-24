@@ -210,17 +210,6 @@
           >
             ✏️ Edit
           </button>
-
-          <form method="POST" action="{{ route('movies.destroy',$m) }}" onsubmit="return confirm('Are you sure?');" class="flex-1">
-            @csrf 
-            @method('DELETE')
-            <button 
-              type="submit" 
-              class="w-full px-3 py-2 bg-red-500 hover:bg-red-600 text-white text-xs font-medium rounded-lg transition-colors duration-200"
-            >
-              🗑️ Delete
-            </button>
-          </form>
         </div>
       </div>
     @empty

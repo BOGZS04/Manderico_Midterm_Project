@@ -26,7 +26,7 @@
     <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden lg:hidden"></div>
 
     <!-- Modern Sidebar -->
-    <aside id="sidebar" class="w-64 bg-gradient-to-b from-blue-600 to-blue-800 text-white shadow-lg fixed lg:static h-screen overflow-y-auto transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0 z-40">
+    <aside id="sidebar" class="w-64 bg-gradient-to-b from-blue-700 via-blue-800 to-blue-900 text-white shadow-lg fixed lg:static h-screen overflow-y-auto transition-transform duration-300 ease-in-out -translate-x-full lg:translate-x-0 z-40">
       <!-- Logo Section -->
       <div class="p-6 border-b border-blue-500">
         <div class="flex items-center gap-3">
@@ -51,17 +51,36 @@
         </a>
       </nav>
 
-      <!-- Logout Button -->
-      <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-blue-500 bg-blue-700">
-        <form method="POST" action="{{ route('logout') }}">
-          @csrf
-          <button type="submit" class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg text-sm font-medium transition-colors duration-200">
-            <span>🚪</span>
-            <span>Logout</span>
-          </button>
-        </form>
+    <!-- Bottom Section (Profile + Logout) -->
+  <div class="absolute bottom-0 left-0 right-0 bg-blue-800 border-t border-blue-500">
+
+  <!-- User Profile Section -->
+  <div class="p-4 text-white">
+    <div class="flex items-center gap-3">
+      <!-- Profile Icon -->
+      <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold">
+        EM
       </div>
-    </aside>
+
+      <!-- Name + Welcome Text -->
+      <div class="flex flex-col leading-tight">
+        <span class="text-sm opacity-80">Welcome back!</span>
+        <span class="text-base font-semibold">Edgar Manderico</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logout Button -->
+  <div class="p-4 bg-blue-700 border-t border-blue-500">
+    <form method="POST" action="{{ route('logout') }}">
+      @csrf
+      <button type="submit" class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg text-sm font-medium transition-colors duration-200">
+        <span>🚪</span>
+        <span>Logout</span>
+      </button>
+    </form>
+  </div>
+</aside>
 
     <!-- Main Content -->
     <main class="flex-1 overflow-y-auto">

@@ -118,7 +118,7 @@
       <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
         <div class="mb-3">
           <div class="flex items-center gap-2 mb-2">
-            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
               {{ $g->name }}
             </span>
           </div>
@@ -193,7 +193,7 @@
 
           <!-- Genre Name -->
           <td class="px-6 py-4 text-xs sm:text-sm text-gray-900 font-medium">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
               {{ $g->name }}
             </span>
           </td>
@@ -269,7 +269,7 @@
 <div id="editGenreModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
   <div class="bg-white rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto shadow-xl">
     <!-- Modal Header -->
-    <div class="sticky top-0 bg-gradient-to-r from-purple-600 to-purple-700 px-4 sm:px-6 py-4 border-b border-gray-200">
+    <div class="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 px-4 sm:px-6 py-4 border-b border-gray-200">
       <h2 class="text-lg sm:text-xl font-bold text-white">✏️ Edit Genre</h2>
     </div>
 
@@ -284,7 +284,7 @@
           type="text" 
           name="name" 
           id="editGenreName" 
-          class="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition text-sm"
+          class="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition text-sm"
           required
         />
       </div>
@@ -295,7 +295,7 @@
           name="description" 
           id="editGenreDescription" 
           rows="4"
-          class="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition text-sm"
+          class="w-full px-3 sm:px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition text-sm"
         ></textarea>
       </div>
 
@@ -310,7 +310,7 @@
         </button>
         <button 
           type="submit" 
-          class="px-4 py-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg hover:from-purple-700 hover:to-purple-800 font-medium transition-all duration-200 text-sm"
+          class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 font-medium transition-all duration-200 text-sm"
         >
           Update Genre
         </button>
